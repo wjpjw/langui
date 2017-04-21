@@ -56,6 +56,9 @@ $.fn.drawMouse = function() {
         Langui.RedrawMemorized();
 
     };
+    $(this).addEventListener("touchstart", start, false);
+    $(this).addEventListener("touchend", stop, false);
+    $(this).addEventListener("touchmove", move, false);
     $(this).on("mousedown", start);
     $(this).on("mousemove", move);
     $(window).on("mouseup", stop);
